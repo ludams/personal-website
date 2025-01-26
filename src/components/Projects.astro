@@ -1,0 +1,34 @@
+---
+import ghazan from "../assets/ghazan-recording.mp4";
+import GitHubLogo from "./GitHubLogo.astro";
+---
+
+<h2 class="mb-4 text-2xl">Projects</h2>
+<ul class="grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
+  <li class="flex flex-col gap-2">
+    <a href="https://ludams.github.io/ghazan/">
+      <video
+        class="aspect-video w-full rounded-md object-cover shadow-xl"
+        autoplay
+        muted
+        loop
+      >
+        <source src={ghazan} />
+      </video>
+    </a>
+    <div class="flex flex-wrap justify-between gap-2">
+      <div>
+        <h3 class="font-bold">Ghazan</h3>
+        <p>
+          Browser Typing Maze Game<br />Co-developed with
+          <a class="underline" href="https://github.com/leongeorgi"
+            >Leon Georgi
+          </a>
+        </p>
+      </div>
+      <a href="https://github.com/ludams/ghazan/">
+        <GitHubLogo class="h-7 w-7" />
+      </a>
+    </div>
+  </li>
+</ul>

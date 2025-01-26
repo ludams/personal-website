@@ -1,40 +1,26 @@
 ---
-import portrait from "../assets/portrait.jpg";
-import GitHubLogo from "./GitHubLogo.astro";
-import LinkedInLogo from "./LinkedInLogo.astro";
+import SocialLinks from "./SocialLinks.astro";
+import About from "./About.astro";
+import Projects from "./Projects.astro";
+import Portrait from "./Portrait.astro";
+import Title from "./Title.astro";
 ---
 
-<div class="h-[100vh] w-full px-8">
-  <div class="mx-auto flex max-w-md flex-col items-center pt-8 lg:pt-20">
-    <header class="flex flex-col items-center">
-      <img
-        class="rounded-full shadow-xl"
-        width="200"
-        src={portrait.src}
-        alt="Portrait of Lukas Dams"
-      />
-      <h1 class="mt-8 text-4xl font-bold">Lukas Dams</h1>
-      <p class="mt-1 text-lg text-neutral-600 dark:text-neutral-400">
-        Software Developer 👨🏻‍💻
-      </p>
-    </header>
-    <main class="mt-4">
-      <section>
-        <ul class="flex items-end gap-4">
-          <li>
-            <a href="https://linkedin.com/in/ludams" class="flex">
-              <LinkedInLogo
-                class="h-[30px] w-[30px] fill-black dark:fill-white"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/ludams">
-              <GitHubLogo class="h-[30px] w-[30px] dark:fill-white" />
-            </a>
-          </li>
-        </ul>
-      </section>
-    </main>
-  </div>
+<div class="mx-auto flex min-h-screen max-w-3xl flex-col gap-8 p-8 lg:pt-20">
+  <header class="flex flex-col gap-4">
+    <Portrait />
+    <Title />
+  </header>
+
+  <main class="flex flex-1 flex-col items-stretch gap-8">
+    <section>
+      <About />
+    </section>
+
+    <section>
+      <Projects />
+    </section>
+  </main>
+
+  <footer class="text-xs text-stone-500">Copyright © 2025 Lukas Dams</footer>
 </div>
